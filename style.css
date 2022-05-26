@@ -2,3 +2,68 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+/* animation-style */
+
+.animation-container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.animation-container:hover .animation {
+    border: 2px solid #2d25a01a;
+    background-color: #E76F51;
+    color: #264653;
+    height: 110px;
+    width: 100%;
+}
+
+@keyframes sliding {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: 0px;
+        top: 70px;
+    }
+
+    50% {
+        left: 90%;
+        top: 70px;
+    }
+
+    75% {
+        left: 90%;
+        top: 0px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.animation {
+    border: 2px solid rgba(0, 0, 0, 0.091);
+    background-color: #0e1120;
+    color: white;
+    height: 110px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+
+.anm-ball {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    position: relative;
+    font-size: 100%;
+    text-shadow: 10px 10px 20px white;
+    animation: sliding 5s ease-in-out 0.5s infinite alternate;
+    animation-play-state: running;
+}
